@@ -9,7 +9,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { Bell, User, Menu, X } from "lucide-react";
+import { Bell, User, Menu, X, Heart, Activity } from "lucide-react";
 
 const PublicNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +28,23 @@ const PublicNavbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="text-xl font-bold">
-              <span className="text-gray-900">Medi</span>
-              <span className="text-purple-600">Match</span>
+            <div className="flex items-center gap-2 text-xl font-bold">
+              <div className="bg-purple-700 rounded-xl p-2.5">
+                <div className="relative w-5 h-5">
+                  <Heart
+                    className="w-5 h-5 text-white absolute"
+                    strokeWidth={2}
+                  />
+                  <Activity
+                    className="w-5 h-5 text-white absolute"
+                    strokeWidth={2}
+                  />
+                </div>
+              </div>
+              <div className="flex">
+                <span className="text-gray-900">Medi</span>
+                <span className="text-purple-600">Care</span>
+              </div>
             </div>
           </Link>
 
@@ -78,9 +92,23 @@ const PublicNavbar = () => {
               <div className="flex flex-col h-full p-6">
                 {/* Header */}
                 <div className="flex items-center justify-between pb-6 mb-6 border-b">
-                  <div className="text-xl font-bold">
-                    <span className="text-gray-900">Medi</span>
-                    <span className="text-purple-600">Match</span>
+                  <div className="flex items-center gap-2 text-xl font-bold">
+                    <div className="bg-purple-700 rounded-xl p-2.5">
+                      <div className="relative w-5 h-5">
+                        <Heart
+                          className="w-5 h-5 text-white absolute"
+                          strokeWidth={2}
+                        />
+                        <Activity
+                          className="w-5 h-5 text-white absolute"
+                          strokeWidth={2}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex">
+                      <span className="text-gray-900">Medi</span>
+                      <span className="text-purple-600">Care</span>
+                    </div>
                   </div>
                 </div>
 

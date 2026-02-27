@@ -55,7 +55,7 @@ export default function AIVisualization({
 
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <div
-                className="w-[52%] aspect-square rounded-full flex items-center justify-center"
+                className="w-[52%] aspect-square rounded-full flex items-center justify-center bg-purple-500"
                 style={{
                   boxShadow: "0px 0px 40px 0px rgba(109,40,217,0.15)",
                 }}

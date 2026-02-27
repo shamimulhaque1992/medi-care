@@ -46,7 +46,7 @@ export function PublicFooter({
               <div className="flex items-center">
                 <span className="text-lg font-semibold">Medi</span>
                 <span className="text-lg font-semibold text-purple-400">
-                  Match
+                  Care
                 </span>
               </div>
             </div>
