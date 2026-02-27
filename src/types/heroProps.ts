@@ -1,36 +1,54 @@
-export interface HeroSectionProps {
-  badge?: {
-    icon?: React.ReactNode;
-    text: string;
-  };
-  title: {
-    line1: string;
-    line2: string;
-  };
+export interface Badge {
+  icon?: React.ReactNode;
+  text: string;
+}
+
+export interface Title {
+  line1: string;
+  line2: string;
+}
+
+export interface ButtonProps {
+  text: string;
+  onClick?: () => void;
+}
+
+export interface Stat {
+  value: string;
+  label: string;
+}
+
+export interface MatchFoundNotification {
+  title: string;
+  subtitle: string;
+}
+
+export interface OnlineUsersNotification {
+  count: number;
+  text: string;
+}
+
+export interface Notifications {
+  matchFound?: MatchFoundNotification;
+  onlineUsers?: OnlineUsersNotification;
+}
+
+export interface WelcomeTextAndStatProps {
+  badge?: Badge;
+  title: Title;
   description: string;
-  primaryButton?: {
-    text: string;
-    onClick?: () => void;
-  };
-  secondaryButton?: {
-    text: string;
-    onClick?: () => void;
-  };
-  stats?: Array<{
-    value: string;
-    label: string;
-  }>;
+  primaryButton?: ButtonProps;
+  secondaryButton?: ButtonProps;
+  stats?: Stat[];
+}
+export interface SymptomAnalyzerSearchSectionProps {
   searchPlaceholder?: string;
   commonSymptoms?: string[];
   showInteractiveCard?: boolean;
-  notifications?: {
-    matchFound?: {
-      title: string;
-      subtitle: string;
-    };
-    onlineUsers?: {
-      count: number;
-      text: string;
-    };
-  };
+  notifications?: Notifications;
+  primaryButton: ButtonProps;
+  searchValue: string;
+  setSearchValue: (value: string) => void;
 }
+
+export interface HeroSectionProps extends WelcomeTextAndStatProps, Omit<SymptomAnalyzerSearchSectionProps, 'searchValue' | 'setSearchValue' | 'primaryButton'> {}

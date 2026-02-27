@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button";
-import { HeroSectionProps } from "@/types/heroProps";
-import { ArrowRight } from "lucide-react";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import { WelcomeTextAndStatProps } from "@/types/heroProps";
+import { ArrowRight } from "lucide-react";
 
 const WelcomeTextAndStat = ({
   badge,
@@ -10,7 +10,7 @@ const WelcomeTextAndStat = ({
   primaryButton,
   secondaryButton,
   stats,
-}: HeroSectionProps) => {
+}: WelcomeTextAndStatProps) => {
   return (
     <div className="space-y-8 z-10">
       {/* Badge */}
