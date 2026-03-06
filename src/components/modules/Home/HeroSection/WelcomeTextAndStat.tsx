@@ -11,11 +11,12 @@ const WelcomeTextAndStat = ({
   secondaryButton,
   stats,
 }: WelcomeTextAndStatProps) => {
+  const Icon = badge?.icon;
   return (
     <div className="space-y-8 z-10">
       {/* Badge */}
       <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 border border-purple-200 rounded-full shadow-sm backdrop-blur-sm">
-        <span className="text-purple-700">{badge?.icon}</span>
+        <span className="text-purple-700"> {Icon && <Icon />}</span>
         <span className="text-xs sm:text-sm font-medium text-purple-700">
           {badge?.text}
         </span>

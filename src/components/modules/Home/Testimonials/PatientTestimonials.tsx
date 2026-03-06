@@ -1,13 +1,12 @@
-import { PatientTestimonialsProps } from "@/types/testimonials";
 import { TestimonialCard } from "./TestimonialCard";
-import { sampleTestimonials, trustedOrganizations } from "./uiData";
+import {
+  sampleTestimonials,
+  testimonialsUiData,
+  trustedOrganizations,
+} from "./uiData";
 
-export function PatientTestimonials({
-  badgeText = "Patient Stories",
-  title = "What Our Patients Say",
-  description = "Thousands of patients have transformed their healthcare experience with MediMatch. Here's what they have to say.",
-  className = "",
-}: PatientTestimonialsProps) {
+export function PatientTestimonials() {
+  const { badgeText, title, description, className } = testimonialsUiData;
   return (
     <section className={`w-full py-12 md:py-16 lg:py-24 bg-white ${className}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

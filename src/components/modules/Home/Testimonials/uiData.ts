@@ -1,4 +1,8 @@
-import { Testimonial, TrustedOrganization } from "@/types/testimonials";
+import {
+  PatientTestimonialsProps,
+  Testimonial,
+  TrustedOrganization,
+} from "@/types/testimonials";
 
 export const sampleTestimonials: Testimonial[] = [
   {
@@ -41,3 +45,14 @@ export const trustedOrganizations: TrustedOrganization[] = [
   { id: "4", name: "WellnessHub" },
   { id: "5", name: "LifeHealth" },
 ];
+
+export const testimonialsUiData: Omit<
+  PatientTestimonialsProps,
+  "testimonials" | "trustedOrganizations"
+> = {
+  badgeText: "Patient Stories",
+  title: "What Our Patients Say",
+  description:
+    "Thousands of patients have transformed their healthcare experience with MediMatch. Here's what they have to say.",
+  className: "",
+};

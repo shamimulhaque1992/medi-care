@@ -1,5 +1,7 @@
+import { LucideIcon } from "lucide-react";
+
 export interface Badge {
-  icon?: React.ReactNode;
+  icon: LucideIcon;
   text: string;
 }
 
@@ -37,7 +39,7 @@ export interface WelcomeTextAndStatProps {
   badge?: Badge;
   title: Title;
   description: string;
-  primaryButton?: ButtonProps;
+  primaryButton: ButtonProps;
   secondaryButton?: ButtonProps;
   stats?: Stat[];
 }
@@ -51,4 +53,10 @@ export interface SymptomAnalyzerSearchSectionProps {
   setSearchValue: (value: string) => void;
 }
 
-export interface HeroSectionProps extends WelcomeTextAndStatProps, Omit<SymptomAnalyzerSearchSectionProps, 'searchValue' | 'setSearchValue' | 'primaryButton'> {}
+export interface HeroSectionProps
+  extends
+    WelcomeTextAndStatProps,
+    Omit<
+      SymptomAnalyzerSearchSectionProps,
+      "searchValue" | "setSearchValue" | "primaryButton"
+    > {}

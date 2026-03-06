@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import React, { useState } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -70,14 +70,19 @@ const PublicNavbar = () => {
             </button>
 
             {/* Login Button */}
-            <Button variant="outline" className="text-gray-700 border-gray-300">
-              Login
-            </Button>
+            <Link href="/login">
+              <Button
+                variant="outline"
+                className="text-gray-700 border-gray-300"
+              >
+                Login
+              </Button>
+            </Link>
 
             {/* Profile Button */}
             <Button className="bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2">
               <User size={18} />
-              <span className="hidden sm:inline">Dr. Sarah</span>
+              <span className="hidden sm:inline">Register</span>
             </Button>
           </div>
 
@@ -142,12 +147,14 @@ const PublicNavbar = () => {
 
                   {/* Login Button */}
                   <SheetClose asChild>
-                    <Button
-                      variant="outline"
-                      className="w-full text-purple-600 border-purple-200 hover:bg-purple-50 h-12 rounded-xl font-medium"
-                    >
-                      Login
-                    </Button>
+                    <Link href="/login">
+                      <Button
+                        variant="outline"
+                        className="w-full text-purple-600 border-purple-200 hover:bg-purple-50 h-12 rounded-xl font-medium"
+                      >
+                        Login
+                      </Button>
+                    </Link>
                   </SheetClose>
 
                   {/* Profile Button */}
